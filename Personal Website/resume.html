@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Janeberry</title>
+        <link rel="stylesheet" type="text/css" href="design.css">
+		<link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+	<body>
+	
+		
+		<div class="topnavigator w3-animate-top" id="topnav">
+		
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a href="contact.html" target="_parent"> Contact </a>
+			<a class = "active"  href="resume.html" target="_parent"> Resume </a>
+			<a  href="about.html" target="_parent"> About Me </a>
+			<a href="index.html" target="_parent"> Home </a>
+			
+			
+			
+		</div>
+	
+		
+		
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			var i;
+			var x = document.getElementsByClassName("hero-image");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+			myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 4500);    
+			}
+		</script>
+			
+			
+			<script>
+				function myFunction() {
+					var x = document.getElementById("topnav");
+					if (x.className === "topnavigator") {
+					x.className += " responsive";
+					} else {
+					x.className = "topnavigator";
+					}
+				}
+			</script>
+		
+	</body>
+
+
+
+</html>
